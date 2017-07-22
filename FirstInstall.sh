@@ -30,10 +30,20 @@ sudo pip install --upgrade pip
 #Fastlane
 sudo gem install fastlane -NV
 
+#Enable Safari Developer and Web Inspector
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
+defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true && \
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true && \
+defaults write -g WebKitDeveloperExtras -bool true
+
 ### System config ###
 
 #Disable Creation of Metadata Files on USB Volumes
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+#Terminal focus follows mouse
+defaults write com.apple.Terminal FocusFollowsMouse -string YES
 
 #Install All Available Software Updates
 sudo softwareupdate -ia
