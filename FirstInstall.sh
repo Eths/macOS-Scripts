@@ -3,9 +3,9 @@
 
 # Git
 git config --global color.ui true
-git config --global user.name "Rafael Leandro"
-git config --global user.email "rafaelleandro@me.com"
-ssh-keygen -t rsa -C "rafaelleandro@me.com"
+#git config --global user.name "USER"
+#git config --global user.email "user@me.com"
+#ssh-keygen -t rsa -C "user@me.com"
 
 # Generate SSH
 ssh-keygen -t rsa
@@ -27,10 +27,13 @@ sudo easy_install pip
 pip --version
 sudo pip install --upgrade pip
 
-#Fastlane
+# Xcode
+sudo xcrun cc
+
+# Fastlane
 sudo gem install fastlane -NV
 
-#Enable Safari Developer and Web Inspector
+# Enable Safari Developer and Web Inspector
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
 defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true && \
@@ -39,18 +42,26 @@ defaults write -g WebKitDeveloperExtras -bool true
 
 ### System config ###
 
-#Disable Creation of Metadata Files on USB Volumes
+# Disable Creation of Metadata Files on USB Volumes
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
-#Terminal focus follows mouse
+# Disable Creation of Metadata Files on Network Volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+
+# Terminal focus follows mouse
 defaults write com.apple.Terminal FocusFollowsMouse -string YES
 
-#Install All Available Software Updates
+# Install All Available Software Updates
 sudo softwareupdate -ia
 
-#Oh My Zsh
+# Oh My Zsh
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 #Homebrew
 #ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 #brew install rbenv ruby-build
+
+### Finder ###
+# Show Status bar in Finder
+defaults write com.apple.finder ShowStatusBar -bool true
