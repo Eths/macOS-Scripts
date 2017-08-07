@@ -10,6 +10,12 @@ git config --global color.ui true
 # Generate SSH
 ssh-keygen -t rsa
 
+# Homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Ruby
+brew install rbenv ruby-build
+
 # Add rbenv to bash so that it loads every time you open a terminal
 echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
 source ~/.bash_profile
@@ -27,11 +33,14 @@ sudo easy_install pip
 pip --version
 sudo pip install --upgrade pip
 
-# Xcode
-sudo xcrun cc
-
 # Fastlane
 sudo gem install fastlane -NV
+
+# CocoaPods
+sudo gem install cocoapods
+
+# Xcode
+sudo xcrun cc
 
 # Enable Safari Developer and Web Inspector
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
@@ -48,7 +57,6 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Disable Creation of Metadata Files on Network Volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-
 # Terminal focus follows mouse
 defaults write com.apple.Terminal FocusFollowsMouse -string YES
 
@@ -58,9 +66,6 @@ sudo softwareupdate -ia
 # Oh My Zsh
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-#Homebrew
-#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#brew install rbenv ruby-build
 
 ### Finder ###
 # Show Status bar in Finder
