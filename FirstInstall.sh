@@ -14,6 +14,7 @@ ssh-keygen -t rsa
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Ruby
+sudo gem install bundler
 brew install rbenv ruby-build
 
 # Add rbenv to bash so that it loads every time you open a terminal
@@ -38,6 +39,12 @@ sudo gem install fastlane -NV
 
 # CocoaPods
 sudo gem install cocoapods
+
+# Danger
+git clone https://github.com/danger/danger.git
+cd danger
+bundle install
+bundle exec rake spec
 
 # Xcode
 sudo xcrun cc
