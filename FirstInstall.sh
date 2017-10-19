@@ -34,6 +34,9 @@ sudo easy_install pip
 pip --version
 sudo pip install --upgrade pip
 
+# Virtualenv
+sudo pip install virtualenv
+
 # Fastlane
 sudo gem install fastlane -NV
 
